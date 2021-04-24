@@ -105,4 +105,18 @@ function computerAction(){
     }
 }
 
+function resetGame(){
+    maxcoins = 3; 
+    mincoins = 1; 
+    cur_turn = 1; 
+    total_turn = 5;
+    player_turn = true;
+    gameend = false;
+    player_payoff = 0;
+    computer_payoff = 0;
+}
 
+
+function setTotalturn(turn){
+    total_turn = turn;
+}
