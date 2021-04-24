@@ -8,6 +8,7 @@ function startGame(){
     maxtext = new component("30px", "serif", "red", 450, 400, "text");
     mintext = new component("30px", "serif", "blue", 750, 400, "text");
     turn_text = new component("35px","serif", "white",450, 80, "text");
+    resetGame();
     CGameArea.start();
 }
 var CGameArea = {
@@ -125,6 +126,5 @@ function setTotalturn(turn){
 
 function endGame(){
     clearInterval(CGameArea.interval);
-    CGameArea.canvas = null;
     document.body.childNodes[0].remove();
 }
