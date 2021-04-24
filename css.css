@@ -1,0 +1,49 @@
+body {
+	background-image: linear-gradient(#000000, #fcfcfc);
+	color: #888888;
+}
+
+
+#p1{
+	width: 100%;
+	height: 100%;
+	font-size: 160%;
+	position: absolute;
+	top: 80px;
+	text-align: center;
+}
+
+
+
+#p2{
+	background-image: url(image/ceti.png);
+	background-repeat: no-repeat;
+}
+
+
+.button {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	color: #222222;
+	font-size: 20px;
+	padding: 7px;
+	transition-duration: 1s;
+	position:absolute;
+	bottom: 110px;
+	right: 49%;
+	width: 70px;
+	height: 40px;
+	border-radius: 8px;
+	background-image: linear-gradient(to right, #aaaaaa, #ffffff);
+	font-style: Italic;
+}
+
+.button1:hover {
+	box-shadow: 10px 10px 7px #111111;
+	background-image: linear-gradient(to right, #ffffff, #aaaaaa);
+	
+}	
+
+
+
+

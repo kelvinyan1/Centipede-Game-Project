@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<link rel = "stylesheet"
+		href = test.css>
+
+		<script>
+			
+		</script>
+	</head>
+	<body>
+		<div id="p1", style="display: block;"> 
+			<h1> The Centipede game</h1>
+			<br>
+			<h2 style="color:#000000"> Math 3911 Group Project </h2>
+			<br>
+			<br>
+			<br><br><br><br>
+			<h3 style="color:#333333"> Wang Dekang, Yan Zipeng, Li Kehan, Wu Huan </h3>
+			<button class="button button1", onclick="document.getElementById('p1').style.display = 'none'; document.getElementById('p2').style.display = 'block'"> Play </button>
+		</div>
+		
+			
+		<img src="image/ceti3.png" width="1200" height="510" style="position: absolute;bottom: 20%;right:5%;transform: rotate(0deg);z-index: -1;opacity: 0.5 ">
+		
+		<div id='p2', style="display: none;">
+			<h1 style="color: #fcfcfc; text-align: center"> Introduction </h1>
+			<button class="button button1", style="right: 5%;", onclick="document.getElementById('p2').style.display = 'none'; document.getElementById('p3').style.display = 'block'"> Next </button>
+			<p><!--to be finished--></p>
+		</div>
+
+		<div id="p3", style="display: none;">
+			<h1 style="color:#aaaaaa; text-align:center; position:absolute; top: 50px; left: 320px;"> Here we use a simple game to model that situation:</h1>
+			<br>
+			<p style="color:#aaaaaa; text-align:center; position:absolute; top: 120px; left: 520px; font-size: 30px"> There are 2 piles of coins:</p>
+			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 200px;">
+			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 200px;">
+			<p style="color: #000000; position: absolute; top: 400px; left: 320px; font-size: 40px;"> One consisting of 1 coin, the other consists of 0 </p>
+			<p style="color: #000000; font-size: 40px;"> You and your adversary (int this case, the computer) are trying to get more coins from the two piles.</p>
+			<button class="button button1", style="right: 5%;" onclick="document.getElementById('p3').style.display = 'none'; document.getElementById('p4').style.display = 'block'"> Next </button>
+		</div>
+
+		<div id='p4', style="display: none;">
+			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 50px;">
+			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 50px;">
+			<p style="position: absolute; right:25%; top: 400px; font-size: 30px; color:#000000;"> You take turns to amke actions, when it is your turn, you may:</p><hr>
+			<p style="position: absolute; right:25%; top: 500px; font-size: 30px; color:#000000;">1. take: take the piles ton the other player, the number of coins of each pile increase by 1(e.g. (1, 0) -> (2, 1)) Then the other player start his turn.</p>
+		</div>
+
+		
+	</body>
+</html>
