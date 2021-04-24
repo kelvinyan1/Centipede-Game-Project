@@ -121,3 +121,10 @@ function resetGame(){
 function setTotalturn(turn){
     total_turn = turn;
 }
+
+
+function endGame(){
+    clearInterval(CGameArea.interval);
+    CGameArea.canvas = null;
+    document.body.childNodes[0].remove();
+}
