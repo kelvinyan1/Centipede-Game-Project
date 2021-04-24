@@ -1,13 +1,13 @@
 <html>
 	<head>
 		<link rel = "stylesheet"
-		href = test.css>
+		href = css.css>
 
-		<script>
-			
-		</script>
+		<script src=pageexe.js></script>
+		<script src=game.js></script>
 	</head>
 	<body>
+		<img id="centipede1" src="image/ceti3.png" width="1200" height="510" style="position: absolute;bottom: 20%;right:5%;transform: rotate(0deg);z-index: -1;opacity: 0.5 ">
 		<div id="p1", style="display: block;"> 
 			<h1> The Centipede game</h1>
 			<br>
@@ -16,36 +16,55 @@
 			<br>
 			<br><br><br><br>
 			<h3 style="color:#333333"> Wang Dekang, Yan Zipeng, Li Kehan, Wu Huan </h3>
-			<button class="button button1", onclick="document.getElementById('p1').style.display = 'none'; document.getElementById('p2').style.display = 'block'"> Play </button>
+			<button class="button button1", onclick="NextPage(); document.getElementById('centipede1').style.display = 'none'"> Play </button>
 		</div>
 		
 			
-		<img src="image/ceti3.png" width="1200" height="510" style="position: absolute;bottom: 20%;right:5%;transform: rotate(0deg);z-index: -1;opacity: 0.5 ">
 		
 		<div id='p2', style="display: none;">
-			<h1 style="color: #fcfcfc; text-align: center"> Introduction </h1>
-			<button class="button button1", style="right: 5%;", onclick="document.getElementById('p2').style.display = 'none'; document.getElementById('p3').style.display = 'block'"> Next </button>
+			<h1 style="color: #fcfcfc; text-align: center; font-size: 40px"> Introduction </h1>
+			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button>
 			<p><!--to be finished--></p>
 		</div>
-
+		
 		<div id="p3", style="display: none;">
-			<h1 style="color:#aaaaaa; text-align:center; position:absolute; top: 50px; left: 320px;"> Here we use a simple game to model that situation:</h1>
+			<h1 style="color:#fafafa; text-align:center; font-size: 40px"> Here we use a simple game to model that situation:</h1>
 			<br>
-			<p style="color:#aaaaaa; text-align:center; position:absolute; top: 120px; left: 520px; font-size: 30px"> There are 2 piles of coins:</p>
-			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 200px;">
-			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 200px;">
-			<p style="color: #000000; position: absolute; top: 400px; left: 320px; font-size: 40px;"> One consisting of 1 coin, the other consists of 0 </p>
-			<p style="color: #000000; font-size: 40px;"> You and your adversary (int this case, the computer) are trying to get more coins from the two piles.</p>
-			<button class="button button1", style="right: 5%;" onclick="document.getElementById('p3').style.display = 'none'; document.getElementById('p4').style.display = 'block'"> Next </button>
+			<p style="color:#aaaaaa; text-align:center; font-size: 30px"> There are 2 piles of coins:</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 220px;">
+			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 220px;">
+			<p style="color: #000000; font-size: 40px; text-align:center"> One consisting of 1 coin, the other consists of 0 </p>
+			<p style="color: #000000; font-size: 40px; text-align:center"> You and your adversary (int this case, the computer) are trying to get more coins from the two piles.</p>
+			<button class="button button1", style="right: 5%;" onclick=NextPage()> Next </button>
 		</div>
 
 		<div id='p4', style="display: none;">
 			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 50px;">
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 50px;">
-			<p style="position: absolute; right:25%; top: 400px; font-size: 30px; color:#000000;"> You take turns to amke actions, when it is your turn, you may:</p><hr>
-			<p style="position: absolute; right:25%; top: 500px; font-size: 30px; color:#000000;">1. take: take the piles ton the other player, the number of coins of each pile increase by 1(e.g. (1, 0) -> (2, 1)) Then the other player start his turn.</p>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<p style="text-align: center; font-size: 30px; color:#000000;"> You take turns to make actions, when it is your turn, you may:</p><hr>
+			<p style="text-align: center; font-size: 30px; color:#000000;">1. take: take the piles ton the other player, the number of coins of each pile increase by 1(e.g. (1, 0) -> (2, 1)) Then the other player start his turn.</p>
+			<button class="button button1", style="right: 5%;", onclick=NextPage()> Next </button>
+
 		</div>
 
-		
+		<div id = 'p5', style="display: none">
+			<h2 style="color: #fcfcfc; text-align: center"> Let's have a try! This time, the game will end in 6 turns </h2>
+			<p style="color: #fcfcfc; text-align: center">(You->Computer->You->Computer->You->Computer)</p><br>
+			<p style="color: #fcfcfc; text-align: center"> If nobody choose to defect, the coin will be split evenly!</p>
+			<button class="button button1", style="right: 5%;", onclick="NextPage(); startGame();"> Next </button>
+		</div>
+
+		<div id = 'p6', style="display: none">
+			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:49%; top: 150px;">
+			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:51%; top: 150px;">
+
+			<button class = "button button1", style="width: 150px; left: 30%; bottom: 30%;", onclick="takeAction();"> Take </button>
+			<button class = "button button1", style="width: 150px; right: 30%; bottom: 30%", onclick="passAction();"> Pass </button>
+			<button class="button button1", style="right: 5%;", onclick="NextPage(); "> Next </button>
+			<button class = "button button1", style="width: 100px; right: 46%; bottom: 20%", onclick="resetGame();"> reset </button>
+
+		</div>
+				
 	</body>
 </html>

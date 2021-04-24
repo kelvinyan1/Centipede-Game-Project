@@ -5,16 +5,17 @@ var maxtext, mintext, turn_text;
 
 function startGame(){
     
-    maxtext = new component("20px", "serif", "red", 20, 50, "text");
-    mintext = new component("20px", "serif", "blue", 200, 50, "text");
-    turn_text = new component("20px","serif", "black",400, 20, "text");
+    maxtext = new component("30px", "serif", "red", 450, 400, "text");
+    mintext = new component("30px", "serif", "blue", 750, 400, "text");
+    turn_text = new component("35px","serif", "white",450, 80, "text");
     CGameArea.start();
 }
 var CGameArea = {
     canvas : document.createElement("canvas"),
     start : function(){
-        this.canvas.width = 800;
-        this.canvas.height = 80;
+        this.canvas.width = 1100;
+        this.canvas.height = 700;
+        //this.canvas.style.opacity = 0;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);
@@ -90,13 +91,13 @@ function takeAction(){
 function computerAction(){
     if (player_turn ==false&&gameend == false){
         if (cur_turn==total_turn){
-            alert("Your opponent choose to take.");
+            //alert("Your opponent choose to take.");
             player_payoff = mincoins;
             computer_payoff = maxcoins;
             gameend = true;
         }
         else{
-            alert("Your opponet choose to pass.")
+            //alert("Your opponet choose to pass.")
             maxcoins +=1;
             mincoins +=1;
             cur_turn +=1;
