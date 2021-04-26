@@ -130,16 +130,19 @@ function computerAction(){
     if (player_turn ==false&&gameend == false){
         if (cur_turn==total_turn){
             if (rgame == false){
+                confirm("Computer choose to Take!");
                 player_payoff = mincoins;
                 computer_payoff = maxcoins;
             }
             else{
+                confirm("Computer choose to Pass!")
                 player_payoff = (maxcoins+mincoins)/2;
                 computer_payoff = (maxcoins+mincoins)/2;
             }
             gameend = true;
         }
         else{
+            confirm("Computer choose to Take!")
             maxcoins +=1;
             mincoins +=1;
             cur_turn +=1;
