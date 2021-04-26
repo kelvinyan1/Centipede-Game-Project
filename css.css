@@ -15,10 +15,8 @@ body {
 
 
 
-#p2{
-	background-image: url(image/ceti.png);
-	background-repeat: no-repeat;
-}
+
+
 
 
 .button {
@@ -43,6 +41,26 @@ body {
 	background-image: linear-gradient(to right, #ffffff, #aaaaaa);
 	
 }	
+
+#analysis_img {
+	width: 600px;
+	height: 150px;
+
+	background-image: url(image/exlanation.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 15%;
+	right: 30%;
+	transition-duration: 1s;
+	
+}
+
+#analysis_img:hover {
+	position: absolute;
+	right: 30%;
+	bottom: 40%;
+
+}
 
 
 
