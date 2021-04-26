@@ -1,4 +1,4 @@
-var maxcoins = 3, mincoins = 1, cur_turn = 1, total_turn = 5, player_turn = true, gameend = false;
+var maxcoins = 3, mincoins = 1, cur_turn = 1, total_turn = 5, player_turn = true, gameend = false,rgame = false;
 var player_payoff = 0, computer_payoff = 0;
 var maxtext, mintext, turn_text;
 
@@ -11,6 +11,20 @@ function startGame(){
     initGameArea(CGameArea);
     CGameArea.start();
 }
+
+function startCGame(){
+    rgame = false;
+    startGame();
+    resetGame();
+}
+
+function startRGame(){
+    rgame = true;
+    startGame();
+    resetGame();
+}
+
+
 var CGameArea = {
     canvas : document.createElement("canvas", id='canvas'),
     start : function(){
@@ -99,8 +113,14 @@ function passAction(){
 
 function takeAction(){
     if(player_turn == true&&gameend == false){
-        player_payoff = maxcoins;
-        computer_payoff = mincoins;
+        if (rgame == false){
+            player_payoff = maxcoins;
+            computer_payoff = mincoins;
+        }
+        else{
+            player_payoff = mincoins;
+            computer_payoff = maxcoins;
+        }
         gameend = true;
     }
 }
@@ -108,8 +128,14 @@ function takeAction(){
 function computerAction(){
     if (player_turn ==false&&gameend == false){
         if (cur_turn==total_turn){
-            player_payoff = mincoins;
-            computer_payoff = maxcoins;
+            if (rgame == false){
+                player_payoff = mincoins;
+                computer_payoff = maxcoins;
+            }
+            else{
+                player_payoff = (maxcoins+mincoins+2)/2;
+                computer_payoff = (maxcoins+mincoins+2)/2;
+            }
             gameend = true;
         }
         else{
