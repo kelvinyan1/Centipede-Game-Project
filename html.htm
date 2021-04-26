@@ -19,12 +19,11 @@
 			<button class="button button1", onclick="NextPage(); document.getElementById('centipede1').style.display = 'none'"> Play </button>
 		</div>
 		
-			
-		
 		<div id='p2', style="display: none;">
 			<h1 style="color: #fcfcfc; text-align: center; font-size: 40px"> Introduction </h1>
-			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button>
-			<p><!--to be finished--></p>
+			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button><br><br><br>
+			<p style="text-align: center; font-size: 25px; color:#111111">True story: once upon a time, Liu Bei (Emperor of Shu) and Sun Quan (Emperor of Wu) formed an ally against Cao Cao (Emperor of Wei, who had the strongest military forces at that time). However, Liu and Sun kept arguing over the ownership of Jingzhou, a state on the boundary of their countries with great strategic significance, as Liu Bei managed to “borrow” Jingzhou (in fact, only part of it), promising to return the state to Wu once he finished his expansion to the western territories. The problem is, as Shu and Wu were not as strong as Wei, Liu and Sun had to form a coalition against Cao, otherwise neither of them was capable of fighting against Cao. On the other hand, Sun wants to take back Jingzhou before it becomes impossible to do so (as Liu’s power at Jingzhou was stabilizing). It happened that Sun was too impulsive to hold the ally and attacked Jingzhou in 219 AD. It seems that their chain of mutual distrust had inevitably ruled out the possibility of cooperation, abandoning the potential mutual benefit (of making an ally). Similar examples abound in modern society; it is natural to wonder what the underlying reason is for people to sacrifice mutual benefit for marginal interest based on distrust. If you’re familiar with game theory, you should’ve guessed there’s a game-theoretical explanation. To unveil the secret behind this, let’s play a game:
+			</p>
 		</div>
 		
 		<div id="p3", style="display: none;">
@@ -60,9 +59,9 @@
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:51%; top: 150px;">
 
 			<button class = "button button1", style="width: 150px; left: 30%; bottom: 30%;", onclick="takeAction();"> Take </button>
-			<button class = "button button1", style="width: 150px; right: 30%; bottom: 30%", onclick="passAction();"> Pass </button>
-			<button class="button button1", style="right: 5%;", onclick="NextPage(); "> Next </button>
-			<button class = "button button1", style="width: 100px; right: 46%; bottom: 20%", onclick="resetGame();"> reset </button>
+			<button class = "button button1", style="width: 150px; right: 30%; bottom: 30%;", onclick="passAction();"> Pass </button>
+			<button class="button button1", style="right: 5%;", onclick="NextPage(); endGame();"> Next </button>
+			<button class = "button button1", style="width: 100px; right: 46%; bottom: 20%;", onclick="resetGame();"> reset </button>
 
 		</div>
 				
