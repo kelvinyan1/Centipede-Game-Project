@@ -3,18 +3,20 @@ var player_payoff = 0, computer_payoff = 0;
 var maxtext, mintext, turn_text;
 
 
-function startGame(){
+function R_startGame(){
     
-    maxtext = new component("20px", "serif", "red", 20, 50, "text");
-    mintext = new component("20px", "serif", "blue", 200, 50, "text");
-    turn_text = new component("20px","serif", "black",400, 20, "text");
-    CGameArea.start();
+    maxtext = new component("30px", "serif", "red", 450, 400, "text");
+    mintext = new component("30px", "serif", "blue", 750, 400, "text");
+    turn_text = new component("35px","serif", "white",450, 80, "text");
+    resetGame();
+    RGameArea.start();
 }
-var CGameArea = {
+var RGameArea = {
     canvas : document.createElement("canvas"),
     start : function(){
-        this.canvas.width = 800;
-        this.canvas.height = 80;
+        this.canvas.width = 1100;
+        this.canvas.height = 700;
+        //this.canvas.style.opacity = 0;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);
@@ -31,7 +33,7 @@ function component(width, height, color, x, y, type) {
   this.x = x;
   this.y = y;
   this.update = function() {
-        ctx = CGameArea.context;
+        ctx = RGameArea.context;
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
@@ -45,8 +47,8 @@ function component(width, height, color, x, y, type) {
 
 
 function updateGameArea(){
-    CGameArea.clear();
-    computerAction();
+    RGameArea.clear();
+    R_computerAction();
     if (gameend == true){
         maxtext.text = "Your payoff is "+ player_payoff;
         mintext.text = "Your opponent's payoff is "+ computer_payoff;
@@ -64,7 +66,7 @@ function updateGameArea(){
 
 }
 
-function passAction(){
+function R_passAction(){
     if (player_turn == true&&gameend == false){
         maxcoins +=1;
         mincoins +=1;
@@ -79,7 +81,7 @@ function passAction(){
     }
 }
 
-function takeAction(){
+function R_takeAction(){
     if(player_turn == true&&gameend == false){
         player_payoff = mincoins;
         computer_payoff = maxcoins;
@@ -87,14 +89,19 @@ function takeAction(){
     }
 }
 
-function computerAction(){
+function R_computerAction(){
     if (player_turn ==false&&gameend == false){
-        alert("Your opponet passes.")
-        maxcoins +=1;
-        mincoins +=1;
-        cur_turn +=1;
-        player_turn = true;
-
+        if (cur_turn==total_turn){
+            player_payoff = (maxcoins+mincoins+2)/2;
+            computer_payoff = (maxcoins+mincoins+2)/2;
+            gameend = true;
+        }
+        else{
+            maxcoins +=1;
+            mincoins +=1;
+            cur_turn +=1;
+            player_turn = true;
+        }
     }
 }
 
@@ -112,4 +119,10 @@ function resetGame(){
 
 function setTotalturn(turn){
     total_turn = turn;
+}
+
+
+function endGame(){
+    clearInterval(RGameArea.interval);
+    document.body.childNodes[0].remove();
 }
