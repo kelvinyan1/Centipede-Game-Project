@@ -81,7 +81,7 @@ function updateGameArea(){
     computerAction();
     if (gameend == true){
         maxtext.text = "Your payoff is "+ player_payoff;
-        mintext.text = "Your opponent's payoff is "+ computer_payoff;
+        mintext.text = "Computer's payoff is "+ computer_payoff;
     }
     else{
         maxtext.text = "Maxcoins: "+ maxcoins;
@@ -97,18 +97,19 @@ function updateGameArea(){
 }
 
 function passAction(){
+    if (cur_turn >= total_turn){
+        cur_turn =total_turn;
+        gameend = true;
+        player_payoff = (maxcoins+mincoins)/2;
+        computer_payoff = (maxcoins+mincoins)/2;
+    }
     if (player_turn == true&&gameend == false){
         maxcoins +=1;
         mincoins +=1;
         cur_turn +=1;
         player_turn = false;
     }
-    if (cur_turn == total_turn + 1){
-        cur_turn -=1;
-        gameend = true;
-        player_payoff = (maxcoins+mincoins)/2;
-        computer_payoff = (maxcoins+mincoins)/2;
-    }
+    
 }
 
 function takeAction(){
@@ -133,8 +134,8 @@ function computerAction(){
                 computer_payoff = maxcoins;
             }
             else{
-                player_payoff = (maxcoins+mincoins+2)/2;
-                computer_payoff = (maxcoins+mincoins+2)/2;
+                player_payoff = (maxcoins+mincoins)/2;
+                computer_payoff = (maxcoins+mincoins)/2;
             }
             gameend = true;
         }
