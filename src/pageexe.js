@@ -1,4 +1,4 @@
-var current_page = 1, total_page = 6;
+var current_page = 1, total_page = 7;
 var current_page_id = 'p1'
 
 function NextPage(){
@@ -27,6 +27,11 @@ function NextPage(){
         document.getElementById(current_page_id).style.display='none';
         document.getElementById('p6').style.display='block';
         current_page_id = 'p6'
+        break;
+        case 6:
+        document.getElementById(current_page_id).style.display='none';
+        document.getElementById('p7').style.display='block';
+        current_page_id = 'p7'
         break;
         case 0:
         document.getElementById(current_page_id).style.display='none';
