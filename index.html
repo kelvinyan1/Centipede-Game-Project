@@ -91,15 +91,12 @@
 			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button>
 		</div>
 		
-		<div id = 'p9' style="display: none">
-			<h1 style="font-size: 40px; text-align:center; color:#fafafa">Conclusion</h1><br><br><br><br>
-			<p style="color: #111111; font-size: 25px;">Thanks for playing the game, and congratulations on completing it! We make this game trying to demonstrate a peculiar Nash equilibrium result of the game interactively due to players’ mutual distrust. This resembles the renowned game the Prisoners’ Dilemma. Players of both games lose their benefits when cooperation is unstable or doesn’t exist. 
-				<br><br>
-				Although our game is played and studied under theoretical assumptions, it does help explain some phenomena, one of which is the Jingzhou incident back to Three Kingdoms in ancient China, which was also illustrated briefly in the introduction. We know that Kingdom Wu had sovereignty of Jingzhou but couldn’t take it back as the alliance continues. At the same time Kingdom Shu would like to govern the city as long as possible. They both know the other kingdom’s attitude towards the city, and the longer the alliance between the two countries exists, the more power the two countries would have attained. One may find the situation quite similar to our centipede game. An analogy of our explanation of the game thus provides a feasible account for the controversial result that Kingdom Wu tore up the deal and betrayed Kingdom Shu to conquer Jingzhou much earlier than it could defeat Kingdom Wei on their own.
-				<br><br>
-				Although the result of the game seems frustrating as there is no role of trust in it, actual experiments of these games show us that few people would apply the Nash equilibrium strategies, such as those shown in the article of Rosemarie Nagel and Fang Fang Tang(1998). All in all, when we are in a game, it would always be best to make positive communication and build mutual trust with other players to obtain a win-win solution instead of falling into invisible traps like that in the Centipede Game due to distrust.
+		<div id = 'p9' style="display: none;">
+			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> However <h1> <br><br><br>
+			<p style="color: #111111;font-size: 30px; font-style:italic">
+				Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. One may feel that it makes more sense for both players to “reach an agreement” and pass a few rounds before taking, which would lead to better payoff for both of them. Indeed, in many experimental studies of the CG (exact model of game may vary, but with the same overall structure and SPNE), it’s shown that people tend not to adopt the strategy suggested by the SPNE, but rather to delay their taking after a few passes. Therefore we’d like to know what caused this phenomenon, and what, in real life situations, can we do (e.g. impose certain conditions/change the game setup) to encourage people to delay their taking, thereby increasing collective payoff. One such design is called a Reciprocity Game (RG), which we’ll demonstrate as follows.
 			</p>
-			<button class="button button1" style="right: 50%; bottom: 5%" onclick="NextPage();startRGame();"> Next </button>
+			<button class="button button1" style="right: 5%;" onclick="NextPage();startGame();"> Next </button>
 		</div>
 
 		<div id = 'p10', style="display: none">
@@ -111,6 +108,17 @@
 			<button class="button button1", style="right: 5%;", onclick="NextPage(); endGame();"> Next </button>
 			<button class = "button button1", style="width: 100px; right: 46%; bottom: 20%;", onclick="resetGame();"> reset </button>
 
+		</div>
+
+		<div id = 'p11' style="display: none">
+			<h1 style="font-size: 40px; text-align:center; color:#fafafa">Conclusion</h1><br><br><br><br>
+			<p style="color: #111111; font-size: 25px;">Thanks for playing the game, and congratulations on completing it! We make this game trying to demonstrate a peculiar Nash equilibrium result of the game interactively due to players’ mutual distrust. This resembles the renowned game the Prisoners’ Dilemma. Players of both games lose their benefits when cooperation is unstable or doesn’t exist. 
+				<br><br>
+				Although our game is played and studied under theoretical assumptions, it does help explain some phenomena, one of which is the Jingzhou incident back to Three Kingdoms in ancient China, which was also illustrated briefly in the introduction. We know that Kingdom Wu had sovereignty of Jingzhou but couldn’t take it back as the alliance continues. At the same time Kingdom Shu would like to govern the city as long as possible. They both know the other kingdom’s attitude towards the city, and the longer the alliance between the two countries exists, the more power the two countries would have attained. One may find the situation quite similar to our centipede game. An analogy of our explanation of the game thus provides a feasible account for the controversial result that Kingdom Wu tore up the deal and betrayed Kingdom Shu to conquer Jingzhou much earlier than it could defeat Kingdom Wei on their own.
+				<br><br>
+				Although the result of the game seems frustrating as there is no role of trust in it, actual experiments of these games show us that few people would apply the Nash equilibrium strategies, such as those shown in the article of Rosemarie Nagel and Fang Fang Tang(1998). All in all, when we are in a game, it would always be best to make positive communication and build mutual trust with other players to obtain a win-win solution instead of falling into invisible traps like that in the Centipede Game due to distrust.
+			</p>
+			<button class="button button1" style="right: 47%; bottom: 5%; width: 150px;" onclick="NextPage();"> Thank you </button>
 		</div>
 	</body>
 </html>
