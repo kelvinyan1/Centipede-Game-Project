@@ -142,7 +142,7 @@ function computerAction(){
             gameend = true;
         }
         else{
-            confirm("Computer choose to Take!")
+            confirm("Computer choose to Pass!")
             maxcoins +=1;
             mincoins +=1;
             cur_turn +=1;
