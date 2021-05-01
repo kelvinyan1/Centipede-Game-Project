@@ -97,7 +97,7 @@ function updateGameArea(){
 
 function passAction(){
     if (cur_turn >= total_turn){
-        cur_turn =total_turn;
+        cur_turn = total_turn;
         gameend = true;
         player_payoff = (maxcoins+mincoins)/2;
         computer_payoff = (maxcoins+mincoins)/2;
