@@ -1,4 +1,4 @@
-var maxcoins = 3, mincoins = 1, cur_turn = 1, total_turn = 4, player_turn = true, gameend = false,rgame = false;
+var maxcoins = 3, mincoins = 1, cur_turn = 1, total_turn = 6, player_turn = true, gameend = false,rgame = false;
 var player_payoff = 0, computer_payoff = 0;
 var maxtext, mintext, turn_text;
 
@@ -154,7 +154,7 @@ function resetGame(){
     maxcoins = 3; 
     mincoins = 1; 
     cur_turn = 1; 
-    total_turn = 4;
+    total_turn = 6;
     player_turn = true;
     gameend = false;
     player_payoff = 0;
