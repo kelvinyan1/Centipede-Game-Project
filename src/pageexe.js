@@ -1,4 +1,4 @@
-var current_page = 1, total_page = 12;
+var current_page = 1, total_page = 14;
 var current_page_id = 'p1';
 var x = 0;
 
@@ -85,6 +85,16 @@ function NextPage(){
         document.getElementById(current_page_id).style.display='none';
         document.getElementById('p12').style.display='block';
         current_page_id = 'p12'
+        break;
+        case 12:
+        document.getElementById(current_page_id).style.display='none';
+        document.getElementById('p13').style.display='block';
+        current_page_id = 'p13'
+        break;
+        case 13:
+        document.getElementById(current_page_id).style.display='none';
+        document.getElementById('p14').style.display='block';
+        current_page_id = 'p14'
         break;
         case 0:
         document.getElementById(current_page_id).style.display='none';
