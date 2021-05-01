@@ -79,22 +79,9 @@ canvas{
 
 #analysis_img {
 	width: 60%;
-	height: 20%;
-
-	background-image: url(image/exlanation.png);
-	background-repeat: no-repeat;
-	position: absolute;
-	bottom: 15%;
-	right: 20%;
-	transition-duration: 1s;
+	height: 40%;
+	position: relative;
 	
-}
-
-#analysis_img:hover {
-	position: absolute;
-	right: 30%;
-	bottom: 40%;
-
 }
 
 @keyframes centi_rotation {
