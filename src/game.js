@@ -1,13 +1,13 @@
-var maxcoins = 3, mincoins = 1, cur_turn = 1, total_turn = 5, player_turn = true, gameend = false,rgame = false;
+var maxcoins = 3, mincoins = 1, cur_turn = 1, total_turn = 4, player_turn = true, gameend = false,rgame = false;
 var player_payoff = 0, computer_payoff = 0;
 var maxtext, mintext, turn_text;
 
 
 function startGame(){
     
-    maxtext = new component("30px", "serif", "red", 450, 400, "text");
-    mintext = new component("30px", "serif", "blue", 750, 400, "text");
-    turn_text = new component("35px","serif", "white",450, 80, "text");
+    maxtext = new component("30px", "Tuscan", "red", 200, 400, "text");
+    mintext = new component("30px", "Tuscan", "blue", 600, 400, "text");
+    turn_text = new component("35px","Latin", "white",200, 30, "text");
     initGameArea(CGameArea);
     CGameArea.start();
 }
@@ -28,9 +28,8 @@ function startRGame(){
 var CGameArea = {
     canvas : document.createElement("canvas", id='canvas'),
     start : function(){
-        this.canvas.width = 1100;
+        this.canvas.width = 1000;
         this.canvas.height = 700;
-        //this.canvas.style.opacity = 0;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);
@@ -44,7 +43,7 @@ function initGameArea(CGameArea) {
     CGameArea = {
         canvas : document.createElement("canvas", id='canvas'),
         start : function(){
-            this.canvas.width = 1100;
+            this.canvas.width = 1000;
             this.canvas.height = 700;
             this.context = this.canvas.getContext("2d");
             document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -84,11 +83,11 @@ function updateGameArea(){
         mintext.text = "Computer's payoff is "+ computer_payoff;
     }
     else{
-        maxtext.text = "Maxcoins: "+ maxcoins;
-        mintext.text = "Mincoins: "+ mincoins;
+        maxtext.text = "Bigger Pile: "+ maxcoins;
+        mintext.text = "Smaller Pile: "+ mincoins;
     }
     
-    turn_text.text = "Current turn: " + cur_turn + "    " + (total_turn -cur_turn) + " turns to end";
+    turn_text.text = "Current turn: " + cur_turn + "        " + (total_turn -cur_turn) + " turns to end";
     maxtext.update();
     mintext.update();
     turn_text.update();
@@ -130,19 +129,19 @@ function computerAction(){
     if (player_turn ==false&&gameend == false){
         if (cur_turn==total_turn){
             if (rgame == false){
-                confirm("Computer choose to Take!");
+                confirm("Computer chooses to Take!");
                 player_payoff = mincoins;
                 computer_payoff = maxcoins;
             }
             else{
-                confirm("Computer choose to Pass!")
+                confirm("Computer chooses to Pass!")
                 player_payoff = (maxcoins+mincoins)/2;
                 computer_payoff = (maxcoins+mincoins)/2;
             }
             gameend = true;
         }
         else{
-            confirm("Computer choose to Pass!")
+            confirm("Computer chooses to Pass!")
             maxcoins +=1;
             mincoins +=1;
             cur_turn +=1;
@@ -155,7 +154,7 @@ function resetGame(){
     maxcoins = 3; 
     mincoins = 1; 
     cur_turn = 1; 
-    total_turn = 5;
+    total_turn = 4;
     player_turn = true;
     gameend = false;
     player_payoff = 0;
