@@ -5,9 +5,9 @@ var maxtext, mintext, turn_text;
 
 function startGame(){
     
-    maxtext = new component("30px", "serif", "red", 450, 400, "text");
-    mintext = new component("30px", "serif", "blue", 750, 400, "text");
-    turn_text = new component("35px","serif", "white",450, 80, "text");
+    maxtext = new component("30px", "serif", "red", 200, 400, "text");
+    mintext = new component("30px", "serif", "blue", 600, 400, "text");
+    turn_text = new component("35px","serif", "white",200, 80, "text");
     initGameArea(CGameArea);
     CGameArea.start();
 }
@@ -28,7 +28,7 @@ function startRGame(){
 var CGameArea = {
     canvas : document.createElement("canvas", id='canvas'),
     start : function(){
-        this.canvas.width = 1100;
+        this.canvas.width = 1000;
         this.canvas.height = 700;
         //this.canvas.style.opacity = 0;
         this.context = this.canvas.getContext("2d");
