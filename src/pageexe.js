@@ -2,6 +2,7 @@ var current_page = 1, total_page = 14;
 var current_page_id = 'p1';
 var x = 0;
 
+
 var id = null;
 function ChangePageAnimationDisapear(page_id){
     var counter = 0;
@@ -24,14 +25,9 @@ function ChangePageAnimationDisapear(page_id){
 }
 
 
-
-
 function NextPage(){
     switch(current_page){
         case 1:
-        //ChangePageAnimationDisapear(current_page_id)
-        //document.getElementById('p2').style.opacity = 0;
-
         document.getElementById(current_page_id).style.display='none';
         document.getElementById('p2').style.display='block';
         current_page_id = 'p2';
@@ -133,7 +129,6 @@ function NextItem(){
     current_item = current_item + 1;
     current_item = current_item % total_item;
 }
-
 
 
 
