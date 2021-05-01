@@ -36,8 +36,8 @@
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 220px;">
 
 			<div class='text_sec'>
-				<p style="color: #000000; font-size: 40px; text-align:center"> One consisting of 1 coin, the other consists of 0 </p>
-				<p style="color: #000000; font-size: 40px; text-align:center"> You and your adversary (int this case, the computer) are trying to get more coins from the two piles.</p>
+				<p style="color: #000000; font-size: 40px; text-align:left"> One consisting of 3 coin, the other consists of 1 </p>
+				<p style="color: #000000; font-size: 40px; text-align:left"> You and your adversary (int this case, the computer) are trying to get more coins from the two piles.</p>
 			</div>>
 
 			<button class="button button1", style="right: 5%;" onclick=NextPage()> Next </button>
@@ -49,17 +49,18 @@
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<div class="text_sec">
 				<p style="text-align: center; font-size: 30px; color:#000000;"> You take turns to make actions, when it is your turn, you may:</p><hr>
-				<p style="text-align: center; font-size: 30px; color:#000000;">1. take: take the piles ton the other player, the number of coins of each pile increase by 1(e.g. (1, 0) -> (2, 1)) Then the other player start his turn.</p>
+				<p style="text-align: left; font-size: 30px; color:#000000;">1. Take: Take the Bigger pile </p>
+				<p style="text-align: left; font-size: 30px; color:#000000;">2. Pass: The number of coins of each pile increased by 1(e.g. (3, 1) -> (4, 2)) Then the other player start his turn.</p>
 			</div>
 			<button class="button button1", style="right: 5%;", onclick=NextPage()> Next </button>
 
 		</div>
 
 		<div id = 'p5', style="display: none">
-			<h2 style="color: #fcfcfc; text-align: center"> Let's have a try! This time, the game will end in 6 turns </h2>
+			<h2 style="color: #fcfcfc; font-size: 30px; text-align: center"> Let's have a try! This time, the game will end in 6 turns </h2>
 			<div class="text_sec">
-				<p style="color: #fcfcfc; text-align: center">(You->Computer->You->Computer->You->Computer)</p><br>
-				<p style="color: #fcfcfc; text-align: center"> If nobody choose to defect, the coin will be split evenly!</p>
+				<p style="color: #fcfcfc; font-size: 40px; text-align: left; color:#111111">(You->Computer->You->Computer->You->Computer)</p><br>
+				<p style="color: #fcfcfc; font-size: 50px; text-align: center; color: crimson; "> If nobody choose to take, the coins will be split evenly at the end of the game!</p>
 			</div>>
 			<button class="button button1", style="right: 5%;", onclick="NextPage(); startCGame();"> Play! </button>
 		</div>
@@ -97,8 +98,7 @@
 			<h1 style="color: #fafafa; font-size: 40px; text-align:center">Analysis</h1><br><br><br><br><br><br><br><br>
 			<div class='text_sec'>
 				<p style="font-size: 25px; color:#222222">In particular, in the case of CG, since the potential final mover is P2, we consider the last move of P2. Clearly P2 would prefer choosing “take” (with payoff 6), rather than “pass’’ (with a payoff of 5)  in the last round to maximize his payoff. Assuming P2 chooses “take” in the last round, P1 would be better off if he further chooses  “take” in the previous round. Indeed, as the payoff of the game progresses linearly, it’s easy to check that continuing this process, P1 would choose “take” in the very first round. Indeed, the strategy profile where every player chooses “take” at any point in the game is the unique SPNE of the game! (Rosenthal, 1981)
-					<br>
-					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. One may feel that it makes more sense for both players to “reach an agreement” and pass a few rounds before taking, which would lead to better payoff for both of them. Indeed, in many experimental studies of the CG (exact model of game may vary, but with the same overall structure and SPNE), it’s shown that people tend not to adopt the strategy suggested by the SPNE, but rather to delay their taking after a few passes. Therefore we’d like to know what caused this phenomenon, and what, in real life situations, can we do (e.g. impose certain conditions/change the game setup) to encourage people to delay their taking, thereby increasing collective payoff. One such design is called a Reciprocity Game (RG), which we’ll demonstrate as follows.
+					
 				</p>
 				<!--div id = 'analysis_img'-->
 			</div>
