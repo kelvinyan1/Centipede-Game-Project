@@ -37,6 +37,7 @@ canvas{
 	border-radius: 10px;
 	box-shadow: 0px 0px 10px #111111;
 	overflow: scroll;
+	padding: 15px 20px;
 }
 
 ::-webkit-scrollbar {
@@ -78,14 +79,14 @@ canvas{
 }	
 
 #analysis_img {
-	width: 600px;
-	height: 150px;
+	width: 60%;
+	height: 20%;
 
 	background-image: url(image/exlanation.png);
 	background-repeat: no-repeat;
 	position: absolute;
 	bottom: 15%;
-	right: 30%;
+	right: 20%;
 	transition-duration: 1s;
 	
 }
