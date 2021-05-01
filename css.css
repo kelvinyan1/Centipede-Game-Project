@@ -1,6 +1,7 @@
 body {
 	background-image: linear-gradient(#222222, #fcfcfc);
 	color: #888888;
+	overflow: hidden;
 }
 
 canvas{ 
