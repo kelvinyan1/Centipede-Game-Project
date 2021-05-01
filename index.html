@@ -23,16 +23,21 @@
 			<h1 style="color: #fcfcfc; text-align: center; font-size: 40px"> Introduction </h1>
 			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button><br><br><br>
 			<div class='text_sec'>
+				<br>
 				True story: once upon a time, Liu Bei (Emperor of Shu) and Sun Quan (Emperor of Wu) formed an ally against Cao Cao
 				 (Emperor of Wei, who had the strongest military forces at that time). However, Liu and Sun kept arguing over the
 				ownership of Jingzhou, a state on the boundary of their countries with great strategic significance, as Liu Bei
 				managed to “borrow” Jingzhou (in fact, only part of it), promising to return the state to Wu once he finished 
-				his expansion to the western territories. The problem is, as Shu and Wu were not as strong as Wei, Liu and Sun 
+				his expansion to the western territories. 
+				<br><br>
+				The problem is, as Shu and Wu were not as strong as Wei, Liu and Sun 
 				had to form a coalition against Cao, otherwise neither of them was capable of fighting against Cao. On the other
 				hand, Sun wants to take back Jingzhou before it becomes impossible to do so (as Liu’s power at Jingzhou was 
 				stabilizing). It happened that Sun was too impulsive to hold the ally and attacked Jingzhou in 219 AD. It seems
 				that their chain of mutual distrust had inevitably ruled out the possibility of cooperation, abandoning the 
-				potential mutual benefit (of making an ally). Similar examples abound in modern society; it is natural to 
+				potential mutual benefit (of making an ally). 
+				<br><br>
+				Similar examples abound in modern society; it is natural to 
 				wonder what the underlying reason is for people to sacrifice mutual benefit for marginal interest based on 
 				distrust. If you’re familiar with game theory, you should’ve guessed there’s a game-theoretical explanation.
 				To unveil the secret behind this, let’s play a game:
@@ -46,9 +51,9 @@
 			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 220px;">
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 220px;">
 
-			<p style="color: #000000; font-size: 40px; text-align:center"> One consisting of 3 coin, the other consists of 1 </p>
+			<p style="color: #000000; font-size: 40px; text-align:center"> One consisting of 3 coins, the other consisting of 1 coins</p>
 			<br>
-			<p style="color: #000000; font-size: 40px; text-align:center"> You and your adversary (in this case, the computer) are trying to get more coins from the two piles.</p>
+			<p style="color: #000000; font-size: 40px; text-align:center"> You and your adversary (in this case, the computer) <br>are trying to get more coins from the two piles.</p>
 
 			<button class="button button1", style="right: 5%;" onclick=NextPage()> Next </button>
 		</div>
@@ -58,18 +63,18 @@
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 50px;">
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<p style="text-align: center; font-size: 30px; color:#000000;"> You take turns to make actions, when it is your turn, you may:</p><hr>
-			<p style="text-align: center; font-size: 30px; color:#000000;">1. Take: Take the Bigger pile; </p>
-			<p style="text-align: center; font-size: 30px; color:#000000;">2. Pass: The number of coins of each pile increased by 1(e.g. (3, 1) -> (4, 2)) Then the other player start his turn.</p>
+			<p style="text-align: center; font-size: 30px; color:#000000;">1. Take: Take the Bigger pile; <br><br> OR <br></p>
+			<p style="text-align: center; font-size: 30px; color:#000000;">2. Pass: The number of coins of <br>each pile increased by 1(e.g. (3, 1) -> (4, 2)) <br>Then the other player start his turn.</p>
 			<button class="button button1", style="right: 5%;", onclick=NextPage()> Next </button>
 
 		</div>
 
 		<div id = 'p5', style="display: none">
-			<h2 style="color: #fcfcfc; font-size: 30px; text-align: center"> Let's have a try! This time, the game will end in 6 turns </h2>
-			<div class="text_sec">
-				<p style="color: #fcfcfc; font-size: 40px; text-align: center; color:#111111">(You->Computer->You->Computer->You->Computer)</p><br>
-				<p style="color: #fcfcfc; font-size: 50px; text-align: center; color: #333333; "> If nobody choose to take, the coins will be split evenly at the end of the game!</p>
-			</div>
+			<h2 style="color: #fcfcfc; font-size: 40px; text-align: center"> Let's have a try! This time, the game will end in 6 turns </h2>
+			<br><br>
+			<p style="color: #fcfcfc; font-size: 40px; text-align: center; color:#111111">(You->Computer->You->Computer->You->Computer)</p><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<p style="color: #fcfcfc; font-size: 50px; text-align: center; color: #333333; "> If nobody chooses to take, the coins will be <br>split evenly at the end of the game!</p>
 			<button class="button button1", style="right: 5%;", onclick="NextPage(); startCGame();"> Play! </button>
 		</div>
 
@@ -87,13 +92,15 @@
 		<div id ='p7', style="display: none">
 			<h1 style="color: #fafafa; font-size: 40px; text-align:center">Analysis</h1>
 			<h2 style="color: #fafafa; font-size: 30px; text-align:center"> Now, before we start to analyze, let's introduce a new concept:</h2>
+			<h3 style="color: #fafafa; font-size: 20px; text-align:center; color: #aaaaaa;">If you are not familiar with game theory, don't worry, just got to next page and you will see our explanation.</h3>
+
 			<br><h1 style="color: #fafafa; font-size:40px; text-align:center"> SPNE </h1>
 			<div class = 'text_sec' style = "height: 50%">
 				<p>
 				We have learned in class about Nash Equilibrium as a solution concept of two-person nonzero-sum games. A natural extension of Nash Equilibrium in the case of dynamic games is the subgame perfect Nash Equilibrium (SPNE). A subgame of a dynamic game, stated informally,
 				is the continuation of a game at any node in the game’s extensive form satisfying certain properties . A strategy profile (that is, a strategy combination at every step of the game) is a SPNE if it represents a Nash Equilibrium of every subgame of the original game. 
-				Intuitively, an SPNE is a strategy profile that is optimal (in the Nash sense) at any point in the game, regardless of what happened in the past. <hr>
-
+				Intuitively, an SPNE is a strategy profile that is optimal (in the Nash sense) at any point in the game, regardless of what happened in the past. 
+				<br>
 				To find a SPNE, a common method is called backward induction, which is a procedure where one first finds the optimal last move, and the other player chooses their optimal strategies accordingly. Continuing the process until the beginning of the game, one then obtains a SPNE of the game. 
 				Remark: every SPNE must also be a Nash Equilibrium of the game, so the former is actually a stronger solution concept. 
 				
@@ -103,20 +110,22 @@
 		</div>
 
 		<div id = 'p8', style="display: none">
-			<h1 style="color: #fafafa; font-size: 40px; text-align:center; bottom:5%">Analysis</h1><br><br><br><br><br><br>
+			<h1 style="color: #fafafa; font-size: 40px; text-align:center; bottom:5%">Analysis</h1><br><br><br>
 			<div class='text_sec'>
 				<p style="font-size: 25px; color:#222222">
-					In particular, in the case of CG, since the potential final mover is P2, we consider the last move of P2. 
+					In particular, in the game, since the potential final mover is P2, we consider the last move of P2. 
 					Clearly P2 would prefer choosing “take” (with payoff 8), rather than “pass’’ (with a payoff of 7)  in the last 
 					round to maximize his payoff. 
-					<br>
+					<br><br>
 					Assuming P2 chooses “take” in the last round, P1 would be better off if he further chooses  “take” in the 
 					previous round. Indeed, as the payoff of the game progresses linearly, it’s easy to check that 
 					continuing this process, P1 would choose “take” in the very first round. Indeed, the strategy profile where every 
 					player chooses “take” at any point in the game is the unique SPNE of the game! (Rosenthal, 1981)
+					<br><br>
+					As it is shown in the graph, the payoff of this game looks like a centipede. This is why this game is named as centipede game.
+
 					
 				</p>
-				<!--div id = 'analysis_img'-->
 			</div>
 			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button>
 			
@@ -126,12 +135,15 @@
 			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> However <h1> <br><br><br>
 			<div class='text_sec'>
 				<p>
-					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. One may feel that
-					it makes more sense for both players to “reach an agreement” and pass a few rounds before taking, which would lead to 
+					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. 
+					<br>
+					One may feel that it makes more sense for both players to “reach an agreement” and pass a few rounds before taking, which would lead to 
 					better payoff for both of them. Indeed, in many experimental studies of the CG (exact model of game may vary, but with the same overall structure and SPNE), 
 					it’s shown that people tend not to adopt the strategy suggested by the SPNE, but rather to delay their taking after a 
-					few passes. Therefore we’d like to know what caused this phenomenon, and what, in real life situations, can we do (e.g. impose certain conditions/change the game setup) 
-					to encourage people to delay their taking, thereby increasing collective payoff. One such design is called a 
+					few passes. 
+					<br>
+					Therefore we’d like to know what caused this phenomenon, and what, in real life situations, can we do (e.g. impose certain conditions/change the game setup) 
+					To encourage people to delay their taking, thereby increasing collective payoff. One such design is called a 
 					Reciprocity Game (RG), which we’ll demonstrate as follows.
 				</p>
 			</div>
@@ -159,10 +171,35 @@
 
 		</div>
 
-		<div id = 'p12' style="display: none">
+		<div id = 'p12' style="display: none;">
+			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> Analysis of the Reciprocity Game <h1> <br><br><br>
+			<div class='text_sec'>
+				<p>
+					<br>
+					We claim that the game would end in the last round under the same assumption as the previous 
+					game, i.e. P1 and P2 would both get 7 (coins). This can be shown by forward induction.
+					<br><br>
+					In the first round, P1 would get 1 by taking and get at least 3 by passing, regardless of what 
+					happens later. Hence P1 prefers passing at round 1. Similarly, if P2 decides to take, he gets only 2; 
+					whereas he can get at least 4 by passing. Thus P2 has incentive to pass at the second round.
+					<br><br>
+					Inductively, the same reason would apply for the two players until the last round. It therefore 
+					follows that neither player would choose to take at any intermediate round, and they will split the 
+					coins evenly when the maximum round is reached. Indeed, the strategy that both players choose “pass” at 
+					every round is a SPNE of the RG.
+					
+					
+				</p>
+			</div>
+			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button>
+		</div>
+
+		<div id = 'p13' style="display: none">
 			<h1 style="font-size: 40px; text-align:center; color:#fafafa">Conclusion</h1><br>
 			<div class='text_sec'>
-				<p>Thanks for playing the game, and congratulations on completing it! We make this game trying to demonstrate 
+				<p>
+					<br>
+					Thanks for playing the game, and congratulations on completing it! We make this game trying to demonstrate 
 					a peculiar Nash equilibrium result of the game interactively due to players’ mutual distrust. This resembles 
 					the renowned game the Prisoners’ Dilemma. Players of both games lose their benefits when cooperation is unstable 
 					or doesn’t exist. 
