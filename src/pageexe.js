@@ -1,5 +1,6 @@
 var current_page = 1, total_page = 11;
 var current_page_id = 'p1';
+var x = 0;
 
 var id = null;
 function ChangePageAnimationDisapear(page_id){
