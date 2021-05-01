@@ -52,15 +52,6 @@ canvas{
 ::-webkit-scrollbar-thumb {
 	border-radius: 3px;
 }
-	
-
-
-
-
-
-
-
-
 
 .button {
 	text-align: center;
@@ -105,6 +96,24 @@ canvas{
 
 }
 
+@keyframes centi_rotation {
+	0% {transform: rotate(0deg) translate(50px);}
+	50% {transform: rotate(-180deg) translate(50px) scale(1.3);}
+	100% {transform: rotate(-360deg) scale(1);}
+}
 
+#rotating_centi {
+	position: absolute;
+	right: -10%;
+	top: -50%;
+	width: 150%;
+	height: 240%;
+	z-index: -2;
+	opacity: 0.3;
+	animation-name: centi_rotation;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
 
 
