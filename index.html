@@ -23,7 +23,19 @@
 			<h1 style="color: #fcfcfc; text-align: center; font-size: 40px"> Introduction </h1>
 			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button><br><br><br>
 			<div class='text_sec'>
-				True story: once upon a time, Liu Bei (Emperor of Shu) and Sun Quan (Emperor of Wu) formed an ally against Cao Cao (Emperor of Wei, who had the strongest military forces at that time). However, Liu and Sun kept arguing over the ownership of Jingzhou, a state on the boundary of their countries with great strategic significance, as Liu Bei managed to “borrow” Jingzhou (in fact, only part of it), promising to return the state to Wu once he finished his expansion to the western territories. The problem is, as Shu and Wu were not as strong as Wei, Liu and Sun had to form a coalition against Cao, otherwise neither of them was capable of fighting against Cao. On the other hand, Sun wants to take back Jingzhou before it becomes impossible to do so (as Liu’s power at Jingzhou was stabilizing). It happened that Sun was too impulsive to hold the ally and attacked Jingzhou in 219 AD. It seems that their chain of mutual distrust had inevitably ruled out the possibility of cooperation, abandoning the potential mutual benefit (of making an ally). Similar examples abound in modern society; it is natural to wonder what the underlying reason is for people to sacrifice mutual benefit for marginal interest based on distrust. If you’re familiar with game theory, you should’ve guessed there’s a game-theoretical explanation. To unveil the secret behind this, let’s play a game:
+				True story: once upon a time, Liu Bei (Emperor of Shu) and Sun Quan (Emperor of Wu) formed an ally against Cao Cao
+				 (Emperor of Wei, who had the strongest military forces at that time). However, Liu and Sun kept arguing over the
+				ownership of Jingzhou, a state on the boundary of their countries with great strategic significance, as Liu Bei
+				managed to “borrow” Jingzhou (in fact, only part of it), promising to return the state to Wu once he finished 
+				his expansion to the western territories. The problem is, as Shu and Wu were not as strong as Wei, Liu and Sun 
+				had to form a coalition against Cao, otherwise neither of them was capable of fighting against Cao. On the other
+				hand, Sun wants to take back Jingzhou before it becomes impossible to do so (as Liu’s power at Jingzhou was 
+				stabilizing). It happened that Sun was too impulsive to hold the ally and attacked Jingzhou in 219 AD. It seems
+				that their chain of mutual distrust had inevitably ruled out the possibility of cooperation, abandoning the 
+				potential mutual benefit (of making an ally). Similar examples abound in modern society; it is natural to 
+				wonder what the underlying reason is for people to sacrifice mutual benefit for marginal interest based on 
+				distrust. If you’re familiar with game theory, you should’ve guessed there’s a game-theoretical explanation.
+				To unveil the secret behind this, let’s play a game:
 			</div>
 		</div>
 		
@@ -92,7 +104,15 @@
 		<div id = 'p8', style="display: none">
 			<h1 style="color: #fafafa; font-size: 40px; text-align:center; bottom:5%">Analysis</h1><br><br><br><br><br><br>
 			<div class='text_sec'>
-				<p style="font-size: 25px; color:#222222">In particular, in the case of CG, since the potential final mover is P2, we consider the last move of P2. Clearly P2 would prefer choosing “take” (with payoff 6), rather than “pass’’ (with a payoff of 5)  in the last round to maximize his payoff. Assuming P2 chooses “take” in the last round, P1 would be better off if he further chooses  “take” in the previous round. Indeed, as the payoff of the game progresses linearly, it’s easy to check that continuing this process, P1 would choose “take” in the very first round. Indeed, the strategy profile where every player chooses “take” at any point in the game is the unique SPNE of the game! (Rosenthal, 1981)
+				<p style="font-size: 25px; color:#222222">
+					In particular, in the case of CG, since the potential final mover is P2, we consider the last move of P2. 
+					Clearly P2 would prefer choosing “take” (with payoff 8), rather than “pass’’ (with a payoff of 7)  in the last 
+					round to maximize his payoff. 
+					<br>
+					Assuming P2 chooses “take” in the last round, P1 would be better off if he further chooses  “take” in the 
+					previous round. Indeed, as the payoff of the game progresses linearly, it’s easy to check that 
+					continuing this process, P1 would choose “take” in the very first round. Indeed, the strategy profile where every 
+					player chooses “take” at any point in the game is the unique SPNE of the game! (Rosenthal, 1981)
 					
 				</p>
 				<!--div id = 'analysis_img'-->
@@ -105,7 +125,13 @@
 			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> However <h1> <br><br><br>
 			<div class='text_sec'>
 				<p>
-					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. One may feel that it makes more sense for both players to “reach an agreement” and pass a few rounds before taking, which would lead to better payoff for both of them. Indeed, in many experimental studies of the CG (exact model of game may vary, but with the same overall structure and SPNE), it’s shown that people tend not to adopt the strategy suggested by the SPNE, but rather to delay their taking after a few passes. Therefore we’d like to know what caused this phenomenon, and what, in real life situations, can we do (e.g. impose certain conditions/change the game setup) to encourage people to delay their taking, thereby increasing collective payoff. One such design is called a Reciprocity Game (RG), which we’ll demonstrate as follows.
+					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. One may feel that
+					it makes more sense for both players to “reach an agreement” and pass a few rounds before taking, which would lead to 
+					better payoff for both of them. Indeed, in many experimental studies of the CG (exact model of game may vary, but with the same overall structure and SPNE), 
+					it’s shown that people tend not to adopt the strategy suggested by the SPNE, but rather to delay their taking after a 
+					few passes. Therefore we’d like to know what caused this phenomenon, and what, in real life situations, can we do (e.g. impose certain conditions/change the game setup) 
+					to encourage people to delay their taking, thereby increasing collective payoff. One such design is called a 
+					Reciprocity Game (RG), which we’ll demonstrate as follows.
 				</p>
 			</div>
 			<button class="button button1" style="right: 5%;" onclick="NextPage();startRGame();"> Next </button>
@@ -125,11 +151,25 @@
 		<div id = 'p11' style="display: none">
 			<h1 style="font-size: 40px; text-align:center; color:#fafafa">Conclusion</h1><br>
 			<div class='text_sec'>
-				<p>Thanks for playing the game, and congratulations on completing it! We make this game trying to demonstrate a peculiar Nash equilibrium result of the game interactively due to players’ mutual distrust. This resembles the renowned game the Prisoners’ Dilemma. Players of both games lose their benefits when cooperation is unstable or doesn’t exist. 
+				<p>Thanks for playing the game, and congratulations on completing it! We make this game trying to demonstrate 
+					a peculiar Nash equilibrium result of the game interactively due to players’ mutual distrust. This resembles 
+					the renowned game the Prisoners’ Dilemma. Players of both games lose their benefits when cooperation is unstable 
+					or doesn’t exist. 
 					<br><br>
-					Although our game is played and studied under theoretical assumptions, it does help explain some phenomena, one of which is the Jingzhou incident back to Three Kingdoms in ancient China, which was also illustrated briefly in the introduction. We know that Kingdom Wu had sovereignty of Jingzhou but couldn’t take it back as the alliance continues. At the same time Kingdom Shu would like to govern the city as long as possible. They both know the other kingdom’s attitude towards the city, and the longer the alliance between the two countries exists, the more power the two countries would have attained. One may find the situation quite similar to our centipede game. An analogy of our explanation of the game thus provides a feasible account for the controversial result that Kingdom Wu tore up the deal and betrayed Kingdom Shu to conquer Jingzhou much earlier than it could defeat Kingdom Wei on their own.
+					Although our game is played and studied under theoretical assumptions, it does help explain some phenomena, 
+					one of which is the Jingzhou incident back to Three Kingdoms in ancient China, which was also illustrated briefly 
+					in the introduction. We know that Kingdom Wu had sovereignty of Jingzhou but couldn’t take it back as the alliance 
+					continues. At the same time Kingdom Shu would like to govern the city as long as possible. They both know the other 
+					kingdom’s attitude towards the city, and the longer the alliance between the two countries exists, the more power 
+					the two countries would have attained. One may find the situation quite similar to our centipede game. An analogy of 
+					our explanation of the game thus provides a feasible account for the controversial result that Kingdom Wu tore up the 
+					deal and betrayed Kingdom Shu to conquer Jingzhou much earlier than it could defeat Kingdom Wei on their own.
 					<br><br>
-					Although the result of the game seems frustrating as there is no role of trust in it, actual experiments of these games show us that few people would apply the Nash equilibrium strategies, such as those shown in the article of Rosemarie Nagel and Fang Fang Tang(1998). All in all, when we are in a game, it would always be best to make positive communication and build mutual trust with other players to obtain a win-win solution instead of falling into invisible traps like that in the Centipede Game due to distrust.
+					Although the result of the game seems frustrating as there is no role of trust in it, actual experiments of these 
+					games show us that few people would apply the Nash equilibrium strategies, such as those shown in the article of 
+					Rosemarie Nagel and Fang Fang Tang(1998). All in all, when we are in a game, it would always be best to make positive 
+					communication and build mutual trust with other players to obtain a win-win solution instead of falling into invisible 
+					traps like that in the Centipede Game due to distrust.
 				</p>
 			</div>
 			<button class="button button1" style="right: 47%; bottom: 5%; width: 150px;" onclick="NextPage();"> Thank you </button>
