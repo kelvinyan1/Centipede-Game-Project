@@ -121,7 +121,6 @@ canvas{
 	position: absolute;
 	left: 35%;
 	bottom: 5%;
-	display: inline-block;
 }
 .pagination a {
 	color: black;

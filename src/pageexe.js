@@ -24,6 +24,29 @@ function ChangePageAnimationDisapear(page_id){
     }
 }
 
+function PaginationForward() {
+    document.getElementById('paginator1').style.display = 'none';
+    document.getElementById('paginator2').style.display = 'inline-block';
+}
+
+function PaginationBackward() {
+    document.getElementById('paginator2').style.display = 'none';
+    document.getElementById('paginator1').style.display = 'inline-block';
+}
+
+function disablePaginator() {
+    document.getElementById('paginator1').style.display = 'none';
+    document.getElementById('paginator2').style.display = 'none';
+}
+
+function enablePaginator(id) {
+    document.getElementById(id).style.display = 'inline-block';
+}
+
+function activePagi(id) {
+    document.getElementById(id).className = 'active';
+}
+
 
 function NextPage(){
     switch(current_page){

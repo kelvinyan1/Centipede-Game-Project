@@ -8,17 +8,26 @@
 	</head>
 	<body>
 		<img id = "rotating_centi" src="image/circular_centi.png">
-		<div class = "pagination">
-			<a href="#">&laquo;</a>
-			<a href="#">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-			<a href="#">4</a>
-			<a href="#">5</a>
-			<a href="#">6</a>
-			<a href="#">7</a>
-			<a href="#">&raquo;</a>
+		<div class = "pagination" style='display: inline-block;' id = "paginator1">
+			<a onclick="GotoPage(1);" href="#" id = '1'>1</a>
+			<a onclick="GotoPage(2);" href="#" id = '2'>2</a>
+			<a onclick="GotoPage(3);" href="#" id = '3'>3</a>
+			<a onclick="GotoPage(4);" href="#" id = '4'>4</a>
+			<a onclick="GotoPage(5);" href="#" id = '5'>5</a>
+			<a onclick="GotoPage(7);" href="#" id = '6'>6</a>
+			<a onclick="GotoPage(8);" href="#" id = '7'>7</a>
+			<a onclick="PaginationForward();" href="#">&raquo;</a> 
 		</div>
+
+		<div class = "pagination" style="display: none;" id = "paginator2">
+			<a onclick="PaginationBackward();"href="#">&laquo;</a>
+			<a onclick="GotoPage(9);" href="#" id = '8'>8</a>
+			<a onclick="GotoPage(10);" href="#" id = '9'>9</a>
+			<a onclick="GotoPage(12);" href="#" id = '10'>10</a>
+			<a onclick="GotoPage(13);" href="#" id = '11'>11</a>
+			<a onclick="GotoPage(14);" href="#" id = '12'>12</a>
+		</div>
+
 		<div id="p1", style="display: block;"> 
 			<h1 style="color:#ffffff"> The Centipede game</h1>
 			<br>
@@ -85,7 +94,7 @@
 			<p style="color: #fcfcfc; font-size: 40px; text-align: center; color:#111111">(You->Computer->You->Computer->You->Computer)</p><br>
 			<br><br><br><br><br><br><br><br><br><br>
 			<p style="color: #fcfcfc; font-size: 50px; text-align: center; color: #333333; "> If nobody chooses to take, the coins will be <br>split evenly at the end of the game!</p>
-			<button class="button button1", style="right: 45%; bottom: 40%; width: 10%; height: 7%;", onclick="NextPage(); startCGame();"> Play! </button>
+			<button class="button button1", style="right: 45%; bottom: 40%; width: 10%; height: 7%;", onclick="NextPage(); startCGame();disablePaginator();"> Play! </button>
 		</div>
 
 		<div id = 'p6', style="display: none">
@@ -94,7 +103,7 @@
 
 			<button class = "button button1", style="width: 200px; height: 70px; left: 20%; bottom: 30%;", onclick="takeAction();"> Take Bigger Pile</button>
 			<button class = "button button1", style="width: 200px; height: 70px; right: 20%; bottom: 30%;", onclick="passAction();"> Pass </button>
-			<button class="button button1", style="right: 5%;", onclick="NextPage(); endGame();"> Next </button>
+			<button class="button button1", style="right: 5%;", onclick="NextPage(); endGame();enablePaginator('paginator1');"> Next </button>
 			<button class = "button button1", style="width: 100px; right: 46%; bottom: 20%;", onclick="resetGame();"> Reset </button>
 
 		</div>
@@ -143,7 +152,7 @@
 		</div>
 		
 		<div id = 'p9' style="display: none;">
-			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> however... <h1> <br><br><br>
+			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> however... <h1> <br>
 			<div class='text_sec'>
 				<p>
 					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. 
@@ -166,13 +175,8 @@
 			<br><br><br><br><br><br><br><br><br>
 			<p style="color: #fcfcfc; font-size: 40px; text-align: center; color:#b62121">When a player chooses Take, he will take the smaller pile.</p>
 			<br>
-<<<<<<< HEAD
 			<p style="color: #fcfcfc; font-size: 30px; text-align: center; color:#111111"> The rest settings are the same as the centipede game. </p> 
-			<button class="button button1", style="right: 45%; bottom: 20%; width: 10%; height: 5%", onclick="NextPage(); startRGame();"> Play! </button>
-=======
-			<p style="color: #fcfcfc; font-size: 30px; text-align: center; color:#111111"> The rest of the settings are the same as the centipede game. </p> 
-			<button class="button button1", style="right: 5%;", onclick="NextPage(); startRGame();"> Play! </button>
->>>>>>> 257301e6181b9f8ffa06f672a0657db5740fd709
+			<button class="button button1", style="right: 45%; bottom: 20%; width: 10%; height: 5%", onclick="NextPage(); startRGame(); disablePaginator();"> Play! </button>
 		
 		</div>
 
@@ -182,7 +186,7 @@
 
 			<button class = "button button1", style="width: 200px; height: 70px; left: 20%; bottom: 30%;", onclick="takeAction();"> Take Smaller Pile</button>
 			<button class = "button button1", style="width: 200px; height: 70px; right: 20%; bottom: 30%;", onclick="passAction();"> Pass </button>
-			<button class="button button1", style="right: 5%;", onclick="NextPage(); endGame();"> Next </button>
+			<button class="button button1", style="right: 5%;", onclick="NextPage(); endGame();enablePaginator('paginator2')"> Next </button>
 			<button class = "button button1", style="width: 100px; right: 46%; bottom: 20%;", onclick="resetGame();"> Reset </button>
 
 		</div>
@@ -246,10 +250,9 @@
 		</div>
 
 		<div id = 'p14' style="display: none;">
-			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> Reference<h1> <br><br><br>
+			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> Reference<h1> <br>
 			<div class='text_sec'>
 				<p>
-					<br>
 					1. Rosenthal, R.W. Games of Perfect Information; Predatory Pricing and the Chain-Store Paradox. J. Econ.
 					Theory 1981, 23, 92–100. 
 					<br><br>
