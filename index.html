@@ -7,7 +7,18 @@
 		<script src=src/game.js></script>
 	</head>
 	<body>
-		<img id = "rotating_centi" src="image/circular_centi.png"> 
+		<img id = "rotating_centi" src="image/circular_centi.png">
+		<div class = "pagination">
+			<a href="#">&laquo;</a>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">&raquo;</a>
+		</div>
 		<div id="p1", style="display: block;"> 
 			<h1 style="color:#ffffff"> The Centipede game</h1>
 			<br>
@@ -16,13 +27,13 @@
 			<br>
 			<br><br><br>
 			<h3 style="color:#333333"> Wang Dekang, Yan Zipeng, Li Kehan, Wu Huan </h3>
-			<button class="button button1", onclick="NextPage(); document.getElementById('centipede1').style.display = 'none'"> Play </button>
+			<button class="button button1", style="bottom: 45%" onclick="NextPage(); document.getElementById('centipede1').style.display = 'none'"> Play </button>
 		</div>
 		
 		<div id='p2', style="display: none;">
 			<h1 style="color: #fcfcfc; text-align: center; font-size: 40px"> Introduction </h1>
 			<button class="button button1" style="right: 5%;" onclick="NextPage();"> Next </button><br><br><br>
-			<div class='text_sec'>
+			<div class='text_sec'><hr>
 				<br>
 				True story: once upon a time, Liu Bei (Emperor of Shu) and Sun Quan (Emperor of Wu) formed an ally against Cao Cao
 				 (Emperor of Wei, who had the strongest military forces at that time). However, Liu and Sun kept arguing over the
@@ -47,12 +58,11 @@
 		<div id="p3", style="display: none;">
 			<h1 style="color:#fafafa; text-align:center; font-size: 40px"> Here we use a simple game to model that situation:</h1>
 			<br>
-			<p style="color:#aaaaaa; text-align:center; font-size: 30px"> There are 2 piles of coins:</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<p style="color:#aaaaaa; text-align:center; font-size: 30px"> There are 2 piles of coins:</p><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 220px;">
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 220px;">
 
 			<p style="color: #000000; font-size: 40px; text-align:center"> One consisting of 3 coins, the other consisting of 1 coins</p>
-			<br>
 			<p style="color: #000000; font-size: 40px; text-align:center"> You and your adversary (in this case, the computer) <br>are trying to get more coins from the two piles.</p>
 
 			<button class="button button1", style="right: 5%;" onclick=NextPage()> Next </button>
@@ -61,7 +71,7 @@
 		<div id='p4', style="display: none;">
 			<img src="image/coin.png", width="200", height="200", style="position: absolute; right:50%; top: 50px;">
 			<img src="image/coin1.png", width="200", height="200", style="position: absolute; left:50%; top: 50px;">
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<p style="text-align: center; font-size: 30px; color:#000000;"> You take turns to make actions, when it is your turn, you may:</p><hr>
 			<p style="text-align: center; font-size: 30px; color:#000000;">1. Take: Take the Bigger pile; <br><br> OR <br></p>
 			<p style="text-align: center; font-size: 30px; color:#000000;">2. Pass: The number of coins of <br>each pile increased by 1(e.g. (3, 1) -> (4, 2)) <br>Then the other player start his turn.</p>
@@ -73,9 +83,9 @@
 			<h2 style="color: #fcfcfc; font-size: 40px; text-align: center"> Let's have a try! This time, the game will end in 6 turns </h2>
 			<br><br>
 			<p style="color: #fcfcfc; font-size: 40px; text-align: center; color:#111111">(You->Computer->You->Computer->You->Computer)</p><br>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br>
 			<p style="color: #fcfcfc; font-size: 50px; text-align: center; color: #333333; "> If nobody chooses to take, the coins will be <br>split evenly at the end of the game!</p>
-			<button class="button button1", style="right: 5%;", onclick="NextPage(); startCGame();"> Play! </button>
+			<button class="button button1", style="right: 45%; bottom: 40%; width: 10%; height: 7%;", onclick="NextPage(); startCGame();"> Play! </button>
 		</div>
 
 		<div id = 'p6', style="display: none">
@@ -94,7 +104,7 @@
 			<h2 style="color: #fafafa; font-size: 30px; text-align:center"> Now, before we start to analyze, let's introduce a new concept:</h2>
 			<h3 style="color: #fafafa; font-size: 20px; text-align:center; color: #aaaaaa;">If you are not familiar with game theory, don't worry, just got to next page and you will see our explanation.</h3>
 
-			<br><h1 style="color: #fafafa; font-size:40px; text-align:center"> SPNE </h1>
+			<h1 style="color: #fafafa; font-size:40px; text-align:center"> SPNE </h1>
 			<div class = 'text_sec' style = "height: 50%">
 				<p>
 				We have learned in class about Nash Equilibrium as a solution concept of two-person nonzero-sum games. A natural extension of Nash Equilibrium in the case of dynamic games is the subgame perfect Nash Equilibrium (SPNE). A subgame of a dynamic game, stated informally,
@@ -132,7 +142,7 @@
 		</div>
 		
 		<div id = 'p9' style="display: none;">
-			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> However <h1> <br><br><br>
+			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> However <h1><br>
 			<div class='text_sec'>
 				<p>
 					Although the reasoning of backward induction seems impeccable, the result is somewhat unintuitive. 
@@ -156,7 +166,7 @@
 			<p style="color: #fcfcfc; font-size: 40px; text-align: center; color:#b62121">When a player chooses Take, he will take the smaller pile.</p>
 			<br>
 			<p style="color: #fcfcfc; font-size: 30px; text-align: center; color:#111111"> The rest settings are the same as the centipede game. </p> 
-			<button class="button button1", style="right: 5%;", onclick="NextPage(); startRGame();"> Play! </button>
+			<button class="button button1", style="right: 45%; bottom: 20%; width: 10%; height: 5%", onclick="NextPage(); startRGame();"> Play! </button>
 		
 		</div>
 
@@ -172,7 +182,7 @@
 		</div>
 
 		<div id = 'p12' style="display: none;">
-			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> Analysis of the Reciprocity Game <h1> <br><br><br>
+			<h1 style="color:#fafafa; text-align:center; font-size:40px;"> Analysis of the Reciprocity Game <h1> 
 			<div class='text_sec'>
 				<p>
 					<br>
@@ -220,7 +230,7 @@
 					traps like that in the Centipede Game due to distrust.
 				</p>
 			</div>
-			<button class="button button1" style="right: 47%; bottom: 5%; width: 150px;" onclick="NextPage();"> Thank you </button>
+			<button class="button button1" style="right: 42.5%; bottom: 9%; width: 15%;" onclick="NextPage();"> Thank you </button>
 		</div>
 
 		<div id = 'p14' style="display: none;">
