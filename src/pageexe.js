@@ -1,9 +1,36 @@
 var current_page = 1, total_page = 11;
-var current_page_id = 'p1'
+var current_page_id = 'p1';
+
+var id = null;
+function ChangePageAnimationDisapear(page_id){
+    var counter = 0;
+    var sum = 300;
+    var elem = document.getElementById(page_id)
+    
+    clearInterval(id)
+    id = setInterval(frame, 10);
+
+    function frame() {
+        
+        if (counter == sum) {
+            clearInterval(id)
+        }
+        else {
+            counter++;
+            elem.style.opacity = 1 - counter /sum;
+        }
+    }
+}
+
+
+
 
 function NextPage(){
     switch(current_page){
         case 1:
+        //ChangePageAnimationDisapear(current_page_id)
+        //document.getElementById('p2').style.opacity = 0;
+
         document.getElementById(current_page_id).style.display='none';
         document.getElementById('p2').style.display='block';
         current_page_id = 'p2';
